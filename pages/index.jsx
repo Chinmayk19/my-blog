@@ -21,12 +21,12 @@ export default function Home({ posts }) {
       <h1 className={styles.heading}>Welcome to My Blog</h1>
       <div className={styles.postList}>
         {posts.map((post) => (
-          <div key={post.id} className={styles.postCard}>
-            <Link href={`/posts/${post.slug}`} className={styles.postTitle}>
+            <Link href={`/posts/${post.slug}`} key={post.id} className={styles.postTitle}>
+          <div  className={styles.postCard}>
               <h2>{post.title}</h2>
               <p className={styles.showMore}>Show more</p>
-            </Link>
           </div>
+            </Link>
         ))}
       </div>
     </div>
